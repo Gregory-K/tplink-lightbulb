@@ -167,7 +167,7 @@ const arg = yargs
       .describe('t', 'Transition time (in ms)')
 
       .example('$0 bright 10.0.0.200 35', 'Set the lightbulb brightness to 35%.')
-      .example('$0 bright -t 10 10.0.0.200 35', 'Take 10 seconds to set the lightbulb brightness to 35%.')
+      .example('$0 bright -t 10000 10.0.0.200 35', 'Take 10 seconds to set the lightbulb brightness to 35%.')
   }, argv => {
     const {transition, brightness} = argv
     const bulb = new Bulb(argv.ip)
